@@ -48,8 +48,8 @@
 
 	@include:
 		{
-			"budge": "budge",
 			"protype": "protype",
+			"raze": "raze",
 			"wichevr": "wichevr",
 			"wichis": "wichis",
 			"zelf": "zelf"
@@ -57,8 +57,8 @@
 	@end-include
 */
 
-const budge = require( "budge" );
 const protype = require( "protype" );
+const raze = require( "raze" );
 const wichevr = require( "wichevr" );
 const wichis = require( "wichis" );
 const zelf = require( "zelf" );
@@ -80,7 +80,7 @@ const aply = function aply( method, context, parameter ){
 		throw new Error( "invalid method" );
 	}
 
-	return method.apply( wichis( context, zelf( this ) ), budge( arguments, 2 ) );
+	return method.apply( wichis( context, zelf( this ) ), raze( arguments ).splice( 2 ) );
 };
 
 module.exports = aply;

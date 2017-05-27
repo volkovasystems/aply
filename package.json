@@ -1,6 +1,6 @@
 {
   "name": "aply",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Simple bind and apply.",
   "main": "aply.js",
   "support": "aply.support.js",
@@ -29,8 +29,8 @@
   "homepage": "https://github.com/volkovasystems/aply#readme",
   "dependencies": {
     "babel-runtime": "^6.23.0",
-    "budge": "^0.28.0",
     "protype": "^0.21.0",
+    "raze": "^0.29.0",
     "wichevr": "^0.9.0",
     "wichis": "^0.13.0",
     "zelf": "^0.11.0"

@@ -1,7 +1,7 @@
 yarn add \
 babel-runtime \
-budge \
 protype \
+raze \
 wichevr \
 wichis \
 zelf \
@@ -15,8 +15,8 @@ source-map-loader \
 webpack \
 --dev && \
 bower install \
-budge \
 protype \
+raze \
 wichevr \
 wichis \
 zelf \
