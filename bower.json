@@ -1,0 +1,33 @@
+{
+  "name": "aply",
+  "version": "0.0.0",
+  "description": "Simple bind and apply.",
+  "main": "aply.deploy.js",
+  "support": "aply.support.js",
+  "authors": [
+    "Richeve S. Bebedor <richeve.bebedor@gmail.com>"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "simple",
+    "bind",
+    "and",
+    "apply",
+    "aply"
+  ],
+  "homepage": "https://github.com/volkovasystems/aply",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "budge": "^0.28.0",
+    "protype": "^0.21.0",
+    "wichevr": "^0.9.0",
+    "wichis": "^0.13.0",
+    "zelf": "^0.11.0"
+  }
+}
