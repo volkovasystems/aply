@@ -1,5 +1,3 @@
-"use strict";
-
 /*;
 	@module-license:
 		The MIT License (MIT)
@@ -58,7 +56,8 @@
 			"leveld": "leveld",
 			"protype": "protype",
 			"shft": "shft",
-			"wichevr": "wichevr"
+			"wichevr": "wichevr",
+			"zelf": "zelf"
 		}
 	@end-include
 */
@@ -67,6 +66,7 @@ const leveld = require( "leveld" );
 const protype = require( "protype" );
 const shft = require( "shft" );
 const wichevr = require( "wichevr" );
+const zelf = require( "zelf" );
 
 const aply = function aply( method, context, parameter ){
 	/*;
@@ -84,6 +84,8 @@ const aply = function aply( method, context, parameter ){
 	if( !protype( method, FUNCTION ) ){
 		throw new Error( "invalid method" );
 	}
+
+	context = zelf( context );
 
 	if( arguments.length > 3 ){
 		parameter = shft( arguments, 2 );
