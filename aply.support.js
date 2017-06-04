@@ -55,7 +55,6 @@
               		{
               			"leveld": "leveld",
               			"protype": "protype",
-              			"raze": "raze",
               			"shft": "shft",
               			"wichevr": "wichevr"
               		}
@@ -64,7 +63,6 @@
 
 var leveld = require("leveld");
 var protype = require("protype");
-var raze = require("raze");
 var shft = require("shft");
 var wichevr = require("wichevr");
 

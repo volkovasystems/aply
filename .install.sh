@@ -2,7 +2,6 @@ yarn add \
 babel-runtime \
 leveld \
 protype \
-raze \
 shft \
 wichevr \
 zelf \
@@ -18,7 +17,6 @@ webpack \
 bower install \
 leveld \
 protype \
-raze \
 shft \
 wichevr \
 zelf \
