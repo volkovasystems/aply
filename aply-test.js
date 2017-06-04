@@ -10,4 +10,12 @@ assert.deepEqual( aply( function hello( value, data ){
 	return [ "hey", value, data, this ];
 }, { "hello": "world" }, "yeah", 123 ), [ "hey", "yeah", 123, { "hello": "world" } ], "should be deeply equal" );
 
+assert.deepEqual( aply( function test( parameter ){
+	return Array.from( arguments );
+}, "test", [ "hello", [ "world" ], "yeah" ] ), [ "hello", [ "world" ], "yeah" ], "should be deeply equal" );
+
+assert.deepEqual( aply( function test( parameter ){
+	return Array.from( arguments );
+}, "test", [ "hello", "world", "yeah" ] ), [ "hello", "world", "yeah" ], "should be deeply equal" );
+
 console.log( "ok" );

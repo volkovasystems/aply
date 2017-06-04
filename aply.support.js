@@ -44,24 +44,29 @@
               
               		If you pass a falsy method, it will default to a function that
               			will throw an no operation error.
+              
+              		Note that this cannot be used with bind, you have to pass the context as a parameter.
+              
+              		Passing array as the last parameter and the only parameter will result to spreading it
+              			to the applying method.
               	@end-module-documentation
               
               	@include:
               		{
+              			"leveld": "leveld",
               			"protype": "protype",
               			"raze": "raze",
-              			"wichevr": "wichevr",
-              			"wichis": "wichis",
-              			"zelf": "zelf"
+              			"shft": "shft",
+              			"wichevr": "wichevr"
               		}
               	@end-include
               */
 
+var leveld = require("leveld");
 var protype = require("protype");
 var raze = require("raze");
+var shft = require("shft");
 var wichevr = require("wichevr");
-var wichis = require("wichis");
-var zelf = require("zelf");
 
 var aply = function aply(method, context, parameter) {
 	/*;
@@ -80,7 +85,17 @@ var aply = function aply(method, context, parameter) {
 		throw new Error("invalid method");
 	}
 
-	return method.apply(wichis(context, zelf(this)), raze(arguments).splice(2));
+	if (arguments.length > 3) {
+		parameter = shft(arguments, 2);
+
+	} else if (arguments.length == 3) {
+		parameter = leveld(shft(arguments, 2));
+
+	} else {
+		return method.apply(context);
+	}
+
+	return method.apply(context, parameter);
 };
 
 module.exports = aply;

@@ -1,9 +1,10 @@
 yarn add \
 babel-runtime \
+leveld \
 protype \
 raze \
+shft \
 wichevr \
-wichis \
 zelf \
 --save && \
 yarn add \
@@ -15,10 +16,11 @@ source-map-loader \
 webpack \
 --dev && \
 bower install \
+leveld \
 protype \
 raze \
+shft \
 wichevr \
-wichis \
 zelf \
 --save \
 --force-latest
