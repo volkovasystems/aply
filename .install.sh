@@ -1,6 +1,6 @@
 yarn add \
 babel-runtime \
-leveld \
+parlev \
 protype \
 shft \
 wichevr \
@@ -15,7 +15,7 @@ source-map-loader \
 webpack \
 --dev && \
 bower install \
-leveld \
+parlev \
 protype \
 shft \
 wichevr \

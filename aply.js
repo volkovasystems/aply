@@ -56,7 +56,7 @@
 
 	@include:
 		{
-			"leveld": "leveld",
+			"parlev": "parlev",
 			"protype": "protype",
 			"shft": "shft",
 			"wichevr": "wichevr",
@@ -65,7 +65,7 @@
 	@end-include
 */
 
-const leveld = require( "leveld" );
+const parlev = require( "parlev" );
 const protype = require( "protype" );
 const shft = require( "shft" );
 const wichevr = require( "wichevr" );
@@ -94,7 +94,7 @@ const aply = function aply( method, context, parameter ){
 		parameter = shft( arguments, 2 );
 
 	}else if( arguments.length == 3 ){
-		parameter = leveld( shft( arguments, 2 ) );
+		parameter = parlev( shft( arguments, 2 ) );
 
 	}else{
 		return method.apply( context );
