@@ -58,7 +58,6 @@
               	@include:
               		{
               			"parlev": "parlev",
-              			"protype": "protype",
               			"shft": "shft",
               			"wichevr": "wichevr",
               			"zelf": "zelf"
@@ -67,7 +66,6 @@
               */
 
 var parlev = require("parlev");
-var protype = require("protype");
 var shft = require("shft");
 var wichevr = require("wichevr");
 var zelf = require("zelf");
@@ -85,7 +83,7 @@ var aply = function aply(method, context, parameter) {
 
 	method = wichevr(method, function procedure() {throw new Error("no operation");});
 
-	if (!protype(method, FUNCTION)) {
+	if (typeof method != "function") {
 		throw new Error("invalid method");
 	}
 

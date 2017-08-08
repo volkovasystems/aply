@@ -1,7 +1,6 @@
 yarn add \
 babel-runtime \
 parlev \
-protype \
 shft \
 wichevr \
 zelf \
@@ -16,7 +15,6 @@ webpack \
 --dev && \
 bower install \
 parlev \
-protype \
 shft \
 wichevr \
 zelf \
