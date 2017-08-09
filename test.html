@@ -1,50 +1,28 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>aply unit test</title>
+		<meta charset="utf-8">
 
-		<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.3.2.css">
+		<title>test:aply</title>
 
-		<script type="application/javascript" src="https://code.jquery.com/qunit/qunit-2.3.2.js"></script>
+		<link rel="stylesheet" href="https://unpkg.com/mocha/mocha.css"/>
 
 		<script type="application/javascript" src="./aply.deploy.js"></script>
 	</head>
 
 	<body>
-		<div id="qunit"></div>
+		<div id="mocha"></div>
 
-		<div id="qunit-fixture"></div>
+		<script type="application/javascript" src="https://unpkg.com/mocha/mocha.js"></script>
 
 		<script type="application/javascript">
-			QUnit.test( "aply unit test", function( assert ) {
+			mocha.setup( "bdd" );
+		</script>
 
-				assert.deepEqual( aply(
-						function hello( value ){ return [ "hey", value, this ]; },
-							{ "hello": "world" }, "yeah"
-					),
-					[ "hey", "yeah", { "hello": "world" } ],
-					"should be equal to [ 'hey', 'yeah', { 'hello': 'world' } ]" );
+		<script type="application/javascript" src="./test.deploy.js"></script>
 
-				assert.deepEqual( aply(
-					function hello( value, data ){ return [ "hey", value, data, this ]; },
-						{ "hello": "world" }, "yeah", 123 ),
-					[ "hey", "yeah", 123, { "hello": "world" } ],
-					"should be equal to [ 'hey', 'yeah', 123, { 'hello': 'world' } ]" );
-
-				assert.deepEqual( aply(
-					function test( parameter ){ return Array.from( arguments ); },
-						"test", [ "hello", [ "world" ], "yeah" ] ),
-					[ "hello", [ "world" ], "yeah" ],
-					"should be equal to [ 'hello', [ 'world' ], 'yeah' ]" );
-
-				assert.deepEqual( aply(
-					function test( parameter ){
-						return Array.from( arguments );
-					}, "test", [ "hello", "world", "yeah" ] ),
-					[ "hello", "world", "yeah" ],
-					"should be equal to [ 'hello', 'world', 'yeah' ]" );
-
-			} );
+		<script type="application/javascript">
+			mocha.run( );
 		</script>
 	</body>
 </html>
