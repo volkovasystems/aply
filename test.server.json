@@ -1,16 +1,74 @@
 {
-  "stats": {
-    "suites": 0,
-    "tests": 0,
-    "passes": 0,
-    "pending": 0,
-    "failures": 0,
-    "start": "2017-08-10T11:31:41.517Z",
-    "end": "2017-08-10T11:31:41.517Z",
-    "duration": 0
-  },
-  "tests": [],
-  "pending": [],
-  "failures": [],
-  "passes": []
+	"stats": {
+		"suites": 5,
+		"tests": 4,
+		"passes": 4,
+		"pending": 0,
+		"failures": 0,
+		"start": "2017-08-25T07:43:01.355Z",
+		"end": "2017-08-25T07:43:01.364Z",
+		"duration": 9
+	},
+	"tests": [
+		{
+			"title": "should be equal to [ 'hey', 'yeah', { 'hello': 'world' } ]",
+			"fullTitle": "aply `aply( function hello( value ){ return [ 'hey', value, this ]; }, { 'hello': 'world' }, 'yeah' )` should be equal to [ 'hey', 'yeah', { 'hello': 'world' } ]",
+			"duration": 4,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to [ 'hey', 'yeah', 123, { 'hello': 'world' } ]",
+			"fullTitle": "aply `aply( function hello( value, data ){ return [ 'hey', value, data, this ]; }, { 'hello': 'world' }, 'yeah', 123 )` should be equal to [ 'hey', 'yeah', 123, { 'hello': 'world' } ]",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to [ 'hello', [ 'world' ], 'yeah' ]",
+			"fullTitle": "aply `aply( function test( parameter ){ return Array.from( arguments ); }, 'test', [ 'hello', [ 'world' ], 'yeah' ] )` should be equal to [ 'hello', [ 'world' ], 'yeah' ]",
+			"duration": 1,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to [ 'hello', 'world', 'yeah' ]",
+			"fullTitle": "aply `aply( function test( parameter ){ return Array.from( arguments ) }, 'test', [ 'hello', 'world', 'yeah' ] )` should be equal to [ 'hello', 'world', 'yeah' ]",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		}
+	],
+	"pending": [],
+	"failures": [],
+	"passes": [
+		{
+			"title": "should be equal to [ 'hey', 'yeah', { 'hello': 'world' } ]",
+			"fullTitle": "aply `aply( function hello( value ){ return [ 'hey', value, this ]; }, { 'hello': 'world' }, 'yeah' )` should be equal to [ 'hey', 'yeah', { 'hello': 'world' } ]",
+			"duration": 4,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to [ 'hey', 'yeah', 123, { 'hello': 'world' } ]",
+			"fullTitle": "aply `aply( function hello( value, data ){ return [ 'hey', value, data, this ]; }, { 'hello': 'world' }, 'yeah', 123 )` should be equal to [ 'hey', 'yeah', 123, { 'hello': 'world' } ]",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to [ 'hello', [ 'world' ], 'yeah' ]",
+			"fullTitle": "aply `aply( function test( parameter ){ return Array.from( arguments ); }, 'test', [ 'hello', [ 'world' ], 'yeah' ] )` should be equal to [ 'hello', [ 'world' ], 'yeah' ]",
+			"duration": 1,
+			"currentRetry": 0,
+			"err": {}
+		},
+		{
+			"title": "should be equal to [ 'hello', 'world', 'yeah' ]",
+			"fullTitle": "aply `aply( function test( parameter ){ return Array.from( arguments ) }, 'test', [ 'hello', 'world', 'yeah' ] )` should be equal to [ 'hello', 'world', 'yeah' ]",
+			"duration": 0,
+			"currentRetry": 0,
+			"err": {}
+		}
+	]
 }

@@ -66,6 +66,45 @@ const aply = require( "./aply.js" );
 
 describe( "aply", ( ) => {
 
+	describe( "`aply( function hello( value ){ return [ 'hey', value, this ]; }, { 'hello': 'world' }, 'yeah' )`", ( ) => {
+		it( "should be equal to [ 'hey', 'yeah', { 'hello': 'world' } ]", ( ) => {
+
+			assert.deepEqual( aply( function hello( value ){ return [ 'hey', value, this ]; },
+				{ 'hello': 'world' }, 'yeah' ), [ "hey", "yeah", { "hello": "world" } ] );
+
+		} );
+	} );
+
+	describe( "`aply( function hello( value, data ){ return [ 'hey', value, data, this ]; }, { 'hello': 'world' }, 'yeah', 123 )`", ( ) => {
+		it( "should be equal to [ 'hey', 'yeah', 123, { 'hello': 'world' } ]", ( ) => {
+
+			assert.deepEqual( aply( function hello( value, data ){ return [ "hey", value, data, this ] },
+				{ "hello": "world" }, "yeah", 123 ),
+				[ "hey", "yeah", 123, { "hello": "world" } ] );
+
+		} );
+	} );
+
+	describe( "`aply( function test( parameter ){ return Array.from( arguments ); }, 'test', [ 'hello', [ 'world' ], 'yeah' ] )`", ( ) => {
+		it( "should be equal to [ 'hello', [ 'world' ], 'yeah' ]", ( ) => {
+
+			assert.deepEqual( aply( function test( parameter ){ return Array.from( arguments ) },
+				"test", [ "hello", [ "world" ], "yeah" ] ),
+				[ "hello", [ "world" ], "yeah" ] );
+
+		} );
+	} );
+
+	describe( "`aply( function test( parameter ){ return Array.from( arguments ) }, 'test', [ 'hello', 'world', 'yeah' ] )`", ( ) => {
+		it( "should be equal to [ 'hello', 'world', 'yeah' ]", ( ) => {
+
+			assert.deepEqual( aply( function test( parameter ){ return Array.from( arguments ) },
+				"test", [ "hello", "world", "yeah" ] ),
+				[ "hello", "world", "yeah" ] );
+
+		} );
+	} );
+
 } );
 
 //: @end-server

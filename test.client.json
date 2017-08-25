@@ -1,0 +1,180 @@
+{
+	"state": {
+		"passed": 4,
+		"failed": 0,
+		"skipped": 0
+	},
+	"start": "2017-08-25T07:43:02.541Z",
+	"end": "2017-08-25T07:43:37.779Z",
+	"capabilities": {
+		"browserName": "chrome",
+		"chromeOptions": {
+			"args": [
+				"disable-gpu",
+				"headless"
+			]
+		},
+		"proxy": null
+	},
+	"host": "127.0.0.1",
+	"port": 4444,
+	"baseUrl": "http://localhost",
+	"framework": "mocha",
+	"mochaOpts": {
+		"timeout": 10000,
+		"ui": "bdd"
+	},
+	"suites": [
+		{
+			"name": "aply",
+			"duration": 0,
+			"start": "2017-08-25T07:43:37.345Z",
+			"tests": [],
+			"hooks": []
+		},
+		{
+			"name": "aply",
+			"duration": 254,
+			"start": "2017-08-25T07:43:37.346Z",
+			"end": "2017-08-25T07:43:37.600Z",
+			"tests": [],
+			"hooks": [
+				{
+					"start": "2017-08-25T07:43:37.349Z",
+					"end": "2017-08-25T07:43:37.349Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "aply",
+					"associatedTest": "should be equal to [ 'hey', 'yeah', { 'hello': 'world' } ]"
+				},
+				{
+					"start": "2017-08-25T07:43:37.461Z",
+					"end": "2017-08-25T07:43:37.462Z",
+					"duration": 1,
+					"title": "\"after each\" hook",
+					"associatedSuite": "aply",
+					"associatedTest": "should be equal to [ 'hey', 'yeah', { 'hello': 'world' } ]"
+				},
+				{
+					"start": "2017-08-25T07:43:37.463Z",
+					"end": "2017-08-25T07:43:37.463Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "aply",
+					"associatedTest": "should be equal to [ 'hey', 'yeah', 123, { 'hello': 'world' } ]"
+				},
+				{
+					"start": "2017-08-25T07:43:37.507Z",
+					"end": "2017-08-25T07:43:37.507Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "aply",
+					"associatedTest": "should be equal to [ 'hey', 'yeah', 123, { 'hello': 'world' } ]"
+				},
+				{
+					"start": "2017-08-25T07:43:37.508Z",
+					"end": "2017-08-25T07:43:37.508Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "aply",
+					"associatedTest": "should be equal to [ 'hello', [ 'world' ], 'yeah' ]"
+				},
+				{
+					"start": "2017-08-25T07:43:37.551Z",
+					"end": "2017-08-25T07:43:37.551Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "aply",
+					"associatedTest": "should be equal to [ 'hello', [ 'world' ], 'yeah' ]"
+				},
+				{
+					"start": "2017-08-25T07:43:37.556Z",
+					"end": "2017-08-25T07:43:37.557Z",
+					"duration": 1,
+					"title": "\"before each\" hook",
+					"associatedSuite": "aply",
+					"associatedTest": "should be equal to [ 'hello', 'world', 'yeah' ]"
+				},
+				{
+					"start": "2017-08-25T07:43:37.600Z",
+					"end": "2017-08-25T07:43:37.600Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "aply",
+					"associatedTest": "should be equal to [ 'hello', 'world', 'yeah' ]"
+				},
+				{
+					"start": "2017-08-25T07:43:37.600Z",
+					"end": "2017-08-25T07:43:37.601Z",
+					"duration": 1,
+					"title": "\"after all\" hook",
+					"associatedSuite": "aply"
+				}
+			]
+		},
+		{
+			"name": "`aply( function hello( value ){ return [ 'hey', value, this ]; }, { 'hello': 'world' }, 'yeah' )`",
+			"duration": 115,
+			"start": "2017-08-25T07:43:37.347Z",
+			"end": "2017-08-25T07:43:37.462Z",
+			"tests": [
+				{
+					"name": "should be equal to [ 'hey', 'yeah', { 'hello': 'world' } ]",
+					"start": "2017-08-25T07:43:37.348Z",
+					"end": "2017-08-25T07:43:37.461Z",
+					"duration": 113,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`aply( function hello( value, data ){ return [ 'hey', value, data, this ]; }, { 'hello': 'world' }, 'yeah', 123 )`",
+			"duration": 45,
+			"start": "2017-08-25T07:43:37.462Z",
+			"end": "2017-08-25T07:43:37.507Z",
+			"tests": [
+				{
+					"name": "should be equal to [ 'hey', 'yeah', 123, { 'hello': 'world' } ]",
+					"start": "2017-08-25T07:43:37.463Z",
+					"end": "2017-08-25T07:43:37.507Z",
+					"duration": 44,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`aply( function test( parameter ){ return Array.from( arguments ); }, 'test', [ 'hello', [ 'world' ], 'yeah' ] )`",
+			"duration": 44,
+			"start": "2017-08-25T07:43:37.507Z",
+			"end": "2017-08-25T07:43:37.551Z",
+			"tests": [
+				{
+					"name": "should be equal to [ 'hello', [ 'world' ], 'yeah' ]",
+					"start": "2017-08-25T07:43:37.507Z",
+					"end": "2017-08-25T07:43:37.551Z",
+					"duration": 44,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		},
+		{
+			"name": "`aply( function test( parameter ){ return Array.from( arguments ) }, 'test', [ 'hello', 'world', 'yeah' ] )`",
+			"duration": 49,
+			"start": "2017-08-25T07:43:37.551Z",
+			"end": "2017-08-25T07:43:37.600Z",
+			"tests": [
+				{
+					"name": "should be equal to [ 'hello', 'world', 'yeah' ]",
+					"start": "2017-08-25T07:43:37.556Z",
+					"end": "2017-08-25T07:43:37.600Z",
+					"duration": 44,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		}
+	]
+}
